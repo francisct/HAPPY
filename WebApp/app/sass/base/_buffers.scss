@@ -1,0 +1,29 @@
+@import "variables";
+
+.top-buffer-sm{
+  margin-top:$buffer-sm;
+}
+
+.no-top-buffer{
+  margin-top:0px;
+}
+
+.top-buffer{
+  margin-top:$buffer-md;
+}
+
+.bottom-buffer{
+  margin-bottom:$buffer-md;
+}
+
+.all-side-margin-sm{
+  margin: $buffer-sm;
+}
+
+.left-buffer-sm{
+  marin-left:$buffer-sm;
+}
+
+.left-buffer-sm{
+  marin-left:$buffer-sm;
+}

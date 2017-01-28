@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates);
+.full-height {
+  height: 100%; }
+
+.full-width {
+  width: 100%; }
+
+.text-left {
+  text-align: left; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.verticalCenter {
+  position: relative;
+  top: 49%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.atBottom {
+  bottom: 0px;
+  left: 0px;
+  position: absolute; }
+
+.textCenter {
+  text-align: center; }
+
+html, body {
+  font: 1em 'Montserrat Alternates'; }
+  html ul, html li, body ul, body li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
+#ng-view {
+  overflow: auto; }
+
+.modal-content {
+  height: 0px; }
+
+h2 {
+  margin-top: 0px; }
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  padding: 0px; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.verticalCenter {
+  position: relative;
+  top: 49%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.atBottom {
+  bottom: 0px;
+  left: 0px;
+  position: absolute; }
+
+.textCenter {
+  text-align: center; }
+
+.top-buffer-sm {
+  margin-top: 20px; }
+
+.no-top-buffer {
+  margin-top: 0px; }
+
+.top-buffer {
+  margin-top: 30px; }
+
+.bottom-buffer {
+  margin-bottom: 30px; }
+
+.all-side-margin-sm {
+  margin: 20px; }
+
+.left-buffer-sm {
+  marin-left: 20px; }
+
+.left-buffer-sm {
+  marin-left: 20px; }
+
+.border-standard {
+  border-color: #a1325e;
+  border-width: initial;
+  border-radius: 4px; }
