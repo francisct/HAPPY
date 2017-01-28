@@ -1,7 +1,3 @@
-//semantria authentication
-var API_KEY = "eb8c0988-bc2e-46d4-90d5-f1cff9ac0f29";
-var API_SECRET = "5a9cf19e-e1c9-47cf-816f-6ec0664fb3bd";
-
 var wordCount = 0;
 var profanityCount = 0;
 
@@ -10,7 +6,7 @@ var len = $set.length;
 $set.each(function(index){
     var el = $(this);
     var text = $(this).html();
-    var words = text.split(/[ ,]+/);
+    var words = text.split(/[ ,]+/).filter(Boolean);
 
     wordCount++;
     words.forEach(function(word){
@@ -31,15 +27,6 @@ $set.each(function(index){
             var positiveAdjective = profanityFilter.providePositiveAdjective();
             el.html(function (i, text) {
                 return text.replace(word,positiveAdjective);
-            });
-        }
-
-        else if(profanityFilter.checkForNegativeVocabulary(word)){
-            profanityCount++;
-            console.log("voc");
-            var positiveVocabulary = profanityFilter.providePositiveVocabulary();
-            el.html(function (i, text) {
-                return text.replace(word,positiveVocabulary);
             });
         }
     });

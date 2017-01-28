@@ -12,10 +12,8 @@ var positiveVocabulary = ["absolutely","adorable","accepted","acclaimed","accomp
 var profanityFilter = {
     checkForProfanity: checkForProfanity,
     checkForNegativeAdjective: checkForNegativeAdjective,
-    checkForNegativeVocabulary : checkForNegativeVocabulary,
     provideCuteWord: provideCuteWord,
-    providePositiveAdjective: providePositiveAdjective,
-    providePositiveVocabulary : providePositiveVocabulary
+    providePositiveAdjective: providePositiveAdjective
 };
 
 function checkForProfanity(word){
@@ -39,16 +37,6 @@ function checkForNegativeAdjective(word){
     });
     return found;
 }
-function checkForNegativeVocabulary(word){
-    var found = false;
-    negativeVocabulary.forEach(function(adjective){
-        if (word.toUpperCase() === adjective.toUpperCase()){
-            found = true;
-            return;
-        }
-    });
-    return found;
-}
 
 function provideCuteWord(){
     return cuteWords[Math.floor(Math.random()*cuteWords.length)];
@@ -56,8 +44,4 @@ function provideCuteWord(){
 
 function providePositiveAdjective(){
     return positiveAdjectives[Math.floor(Math.random()*positiveAdjectives.length)];
-}
-
-function providePositiveVocabulary(){
-    return positiveVocabulary[Math.floor(Math.random()*positiveVocabulary.length)];
 }
