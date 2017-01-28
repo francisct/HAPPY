@@ -5,7 +5,7 @@ var API_SECRET = "5a9cf19e-e1c9-47cf-816f-6ec0664fb3bd";
 var wordCount = 0;
 var profanityCount = 0;
 
-var $set = $('p:not(:has(*)), b:not(:has(*))');
+var $set = $('p:not(:has(*)), b:not(:has(*)), a:not(:has(*))');
 var len = $set.length;
 $set.each(function(index){
     var el = $(this);
