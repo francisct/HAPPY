@@ -5,23 +5,24 @@ var API_SECRET = "5a9cf19e-e1c9-47cf-816f-6ec0664fb3bd";
 var wordCount = 0;
 var profanityCount = 0;
 
-$('p:not(:has(*))').each(function(i){
+$('p:not(:has(*)), b:not(:has(*))').each(function(i){
     var el = $(this);
     var text = $(this).html();
     var words = text.split(" ");
 
-    words.forEach(function(word){
-        wordCount++;
 
+    words.forEach(function(word){
         if (profanityFilter.checkForProfanity(word)){
             profanityCount++;
-            var cuteWord = profanityFilter.provideCuteWord(word);
+            console.log("prof");
+            var cuteWord = profanityFilter.provideCuteWord();
             el.html(cuteWord);
         }
 
         else if(profanityFilter.checkForNegativeAdjective(word)){
             profanityCount++
-            var positiveAdjective = profanityFilter.providePositiveAdjective(word);
+            console.log("ajd");
+            var positiveAdjective = profanityFilter.providePositiveAdjective();
             el.html(positiveAdjective);
         }
     });
@@ -29,6 +30,4 @@ $('p:not(:has(*))').each(function(i){
 
 chrome.runtime.sendMessage({action: 'displayHappyPercentage', wordCount: wordCount, profanityCount: profanityCount});
 
-$('body').appendTo('<div style="position: absolute; background-color:red; bottom:20px; right:20px; width:200px; height:100px">salut </div>');
-
-
+$('<div style="position: fixed; border-radius:5px; background-color: rgba(0,0,0,0.5); color:white; bottom:20px; right:20px; width:200px; height:100px"> We have made this page happier by :'+ profanityCount/wordCount +' </div>').appendTo(document.body);
