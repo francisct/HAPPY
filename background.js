@@ -8,7 +8,11 @@ chrome.tabs.onUpdated.addListener(function (tabId, info) {
             file: 'thirdParty/semantria/SemantriaJavaScriptSDK.js'
         }, function () {
             chrome.tabs.executeScript(null, {
-                file: 'readPage.js'
+                file: 'profanity.js'
+            }, function () {
+                chrome.tabs.executeScript(null, {
+                    file: 'readPage.js'
+                })
             })
         })
     })
