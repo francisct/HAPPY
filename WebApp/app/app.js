@@ -5,7 +5,6 @@ angular.module('myApp', [
     'ngRoute',
     'ngAnimate',
     'ngMaterial',
-    'ngHamburger',
     'ui.bootstrap',
     'angularCSS',
     "fullPage.js"
