@@ -1,4 +1,4 @@
-var extOn = false;
+var extOn = true;
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     extOn = !extOn;

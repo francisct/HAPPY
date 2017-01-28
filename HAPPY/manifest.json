@@ -7,7 +7,7 @@
 	],
 	"browser_action" : {
 		"default_title" : "Happy mode",
-		"default_icon" : "iconred.png"
+		"default_icon" : "icon-38.png"
 	},
 	"background" : {
 		"scripts" : ["thirdParty/jquery-2.2.3.min.js", "background.js"],
