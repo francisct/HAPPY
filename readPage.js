@@ -1,5 +1,5 @@
 
 
-$('p').each(function(el){
-    console.log($(el).html());
+$('p').each(function(i){
+    console.log($(this).html());
 })
