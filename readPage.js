@@ -1,5 +1,5 @@
 
 
-$('p').each(function(){
-    //nuance
+$('p').each(function(el){
+    console.log($(el).html());
 })
