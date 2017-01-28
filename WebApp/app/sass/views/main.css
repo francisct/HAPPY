@@ -242,3 +242,8 @@ img {
 
 .section2 {
   background: linear-gradient(rgba(200, 0, 0, 0.62), rgba(200, 0, 0, 0.1)); }
+
+.section3 {
+  background: linear-gradient(rgba(200, 0, 0, 0.1), white); }
+  .section3 img {
+    width: 400px; }
