@@ -11,9 +11,7 @@ function MainController() {
     var main = this;
 
     main.mainOptions = {
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-        navigation: true,
-        navigationPosition: 'right',
+        navigation: false,
         scrollingSpeed: 1000
     };
 
