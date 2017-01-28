@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Set Page Color Popup</title>
+    <style>
+	@import url(https://fonts.googleapis.com/css?family=Economica);
+	
+    body {
+    	margin : 4px;
+    	width : 600px;
+    	overflow : hidden;
+    	background : white;
+
+    }
+
+     * {
+    	transition : all 0.3s ease - in - out;
+    }
+
+    hr {
+    	margin - top : 7px;
+    }
+
+    button {
+    	outline : none;
+    	border : none;
+    	text - align : center;
+    	font - family : economica;
+    	cursor : pointer;
+    	color : white;
+    }
+
+    button : hover {
+    	background :  # 595959;
+    }
+
+    #download {
+    	font - size : 3em;
+    	width : 100% ;
+    	margin - left : auto;
+    	margin - right : auto;
+    	height : 48px;
+    	display : block;
+    	margin - top : 5px;
+        background: dimgray;
+    }
+	
+	.actionButtons button{
+	display : inline - block;
+    	margin : 3px;
+	color:dimgray;
+	background:none;
+	}
+
+    ul {
+    	list - style : none;
+    	padding : 0;
+    	margin - top : 5px;
+    	margin - bottom : 5px;
+    	margin - left : 2px;
+    }
+
+    ul > li {
+    	cursor : pointer;
+		margin-top:3px;
+		margin-bottom:3px;
+    }
+	
+    ul > li > span {
+    	margin-left:3px;
+	margin-right:3px;
+    }
+
+
+    #delete {
+    	float : right;
+    }
+	
+    </style>
+    <script type="text/javascript" src="thirdParty/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+	<button id="download">DOWNLOAD THIS GAME</button>
+	<hr>
+		<div class="actionButtons">
+			<button id="resume">START</button>
+			<button id="pause">PAUSE</button>
+			<button id="delete">X</button>
+		</div>
+		<ul id="downloads">
+			
+		</ul>
+	</body>
+</html>
