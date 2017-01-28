@@ -29,7 +29,6 @@ $('p:not(:has(*))').each(function(i){
 
 chrome.runtime.sendMessage({action: 'displayHappyPercentage', wordCount: wordCount, profanityCount: profanityCount});
 
-$.get(chrome.extension.getURL('pageStatPopup.html'), function(data) {
-    $($.parseHTML(data)).appendTo('body');
-});
+$('body').appendTo('<div style="position: absolute; background-color:red; bottom:20px; right:20px; width:200px; height:100px">salut </div>');
+
 
