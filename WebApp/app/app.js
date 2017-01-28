@@ -10,19 +10,5 @@ angular.module('myApp', [
     "fullPage.js"
 
 ]).constant("myConfig", {
-})
-
-
-
-    .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-
-
-    $routeProvider
-        .when('/main' , {
-            templateUrl : 'partials/main.html',
-            css: 'sass/views/main.css'
-        })
-
-
-}]);
+});
 
