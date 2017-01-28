@@ -5,31 +5,44 @@ var API_SECRET = "5a9cf19e-e1c9-47cf-816f-6ec0664fb3bd";
 var wordCount = 0;
 var profanityCount = 0;
 
-$('p:not(:has(*))').each(function(i){
+var $set = $('p:not(:has(*)), b:not(:has(*))');
+var len = $set.length;
+$set.each(function(index){
     var el = $(this);
     var text = $(this).html();
     var words = text.split(" ");
 
+    wordCount++;
     words.forEach(function(word){
-        wordCount++;
-
         if (profanityFilter.checkForProfanity(word)){
             profanityCount++;
-            var cuteWord = profanityFilter.provideCuteWord(word);
+            console.log("prof");
+            var cuteWord = profanityFilter.provideCuteWord();
             el.html(cuteWord);
         }
 
         else if(profanityFilter.checkForNegativeAdjective(word)){
             profanityCount++
-            var positiveAdjective = profanityFilter.providePositiveAdjective(word);
+            console.log("ajd");
+            var positiveAdjective = profanityFilter.providePositiveAdjective();
             el.html(positiveAdjective);
         }
     });
+
+    if (index == len - 1) {
+
+        if (!$("#happy").length) {
+            chrome.runtime.sendMessage({
+                action: 'displayHappyPercentage',
+                wordCount: wordCount,
+                profanityCount: profanityCount
+            });
+            var happyPercentage = (profanityCount * 1.0 / wordCount) * 100;
+            $('<div id="happy" style="position: fixed; border-radius:5px; background-color: rgba(0,0,0,0.5); color:white; bottom:20px; right:20px; width:200px; height:100px"> We have made this page happier by :' + happyPercentage + '% </div>').appendTo(document.body);
+
+        }
+    }
+
 });
 
-chrome.runtime.sendMessage({action: 'displayHappyPercentage', wordCount: wordCount, profanityCount: profanityCount});
-
-$.get(chrome.extension.getURL('pageStatPopup.html'), function(data) {
-    $($.parseHTML(data)).appendTo('body');
-});
 
