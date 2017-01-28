@@ -1,5 +1,5 @@
 
 
-$('p').each(function(i){
+$('p:not(:has(*))').each(function(i){
     console.log($(this).html());
 })
