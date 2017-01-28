@@ -14,18 +14,25 @@ $set.each(function(index){
 
     wordCount++;
     words.forEach(function(word){
+
         if (profanityFilter.checkForProfanity(word)){
             profanityCount++;
             console.log("prof");
             var cuteWord = profanityFilter.provideCuteWord();
-            el.html(cuteWord);
+            el.html(function (i, text) {
+                return text.replace(word,cuteWord);
+            });
+
         }
 
         else if(profanityFilter.checkForNegativeAdjective(word)){
-            profanityCount++
+            profanityCount++;
             console.log("ajd");
             var positiveAdjective = profanityFilter.providePositiveAdjective();
-            el.html(positiveAdjective);
+            el.html(function (i, text) {
+                return text.replace(word,positiveAdjective);
+            });
+
         }
     });
 
