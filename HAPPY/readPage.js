@@ -11,7 +11,13 @@ $set.each(function(index){
     wordCount++;
     words.forEach(function(word){
 
-        profanityCount++;
+        var positiveWord = profanityFilter.checkForProfanity(word);
+        if (positiveWord) {
+            el.html(function (i, text) {
+                return text.replace(word, positiveWord);
+            });
+            profanityCount++;
+        }
     });
 
     if (index == len - 1) {
