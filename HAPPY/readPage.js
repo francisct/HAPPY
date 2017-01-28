@@ -10,7 +10,7 @@ var len = $set.length;
 $set.each(function(index){
     var el = $(this);
     var text = $(this).html();
-    var words = text.split(" ");
+    var words = text.split(/[ ,]+/);
 
     wordCount++;
     words.forEach(function(word){
@@ -32,7 +32,15 @@ $set.each(function(index){
             el.html(function (i, text) {
                 return text.replace(word,positiveAdjective);
             });
+        }
 
+        else if(profanityFilter.checkForNegativeVocabulary(word)){
+            profanityCount++;
+            console.log("voc");
+            var positiveVocabulary = profanityFilter.providePositiveVocabulary();
+            el.html(function (i, text) {
+                return text.replace(word,positiveVocabulary);
+            });
         }
     });
 
