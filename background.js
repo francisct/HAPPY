@@ -1,4 +1,5 @@
 
+
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
 
     chrome.tabs.executeScript(null, {
