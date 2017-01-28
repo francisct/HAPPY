@@ -1,4 +1,4 @@
-var extOn = false;
+var turnExtOn = false;
 function myListener(tabId, info) {
 
     chrome.tabs.executeScript(null, {
@@ -19,8 +19,8 @@ function myListener(tabId, info) {
 };
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-    extOn = !extOn;
-    if(extOn) {
+    turnExtOn = !turnExtOn;
+    if(turnExtOn) {
         chrome.browserAction.setIcon({path: "icon.png", tabId:tab.id});
         chrome.tabs.onUpdated.addListener(myListener(tab.id, null));
     }
