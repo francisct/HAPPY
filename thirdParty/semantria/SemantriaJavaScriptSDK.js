@@ -673,6 +673,7 @@
 		 * @param {string} version
 		 */
 		setAPIversion: function(version) {
+			//noinspection JSAnnotator
 			this.X_API_VERSION = version;
 		},
 
