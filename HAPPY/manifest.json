@@ -10,8 +10,13 @@
 		"default_icon" : "icon-38.png"
 	},
 	"background" : {
-		"scripts" : ["thirdParty/jquery-2.2.3.min.js", "background.js"],
-		"pages" : ["popup.html"]
+		"scripts" : ["background.js"]
 	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["jquery-2.2.3.min.js"]
+		}
+	],
 	"manifest_version" : 2
 }
