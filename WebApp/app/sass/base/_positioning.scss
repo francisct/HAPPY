@@ -1,0 +1,22 @@
+@import "mixins/horizontalCenter";
+@import "mixins/verticalCenter";
+
+.center{
+  @include center();
+}
+
+.verticalCenter{
+  @include vertical-align();
+}
+
+.atBottom{
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+.textCenter{
+  text-align:center;
+}
+
+

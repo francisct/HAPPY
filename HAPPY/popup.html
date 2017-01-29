@@ -6,58 +6,58 @@
 	@import url(https://fonts.googleapis.com/css?family=Economica);
 	
     body {
-    	margin : 4px;
-    	width : 600px;
-    	overflow : hidden;
-    	background : white;
+    	margin: 4px;
+    	width: 600px;
+    	overflow: hidden;
+    	background: white;
 
     }
 
      * {
-    	transition : all 0.3s ease - in - out;
+    	transition : all 0.3s ease-in-out;
     }
 
     hr {
-    	margin - top : 7px;
+    	margin-top : 7px;
     }
 
     button {
-    	outline : none;
-    	border : none;
-    	text - align : center;
-    	font - family : economica;
+    	outline: none;
+    	border: none;
+    	text-align : center;
+    	font-family : economica;
     	cursor : pointer;
     	color : white;
     }
 
-    button : hover {
-    	background :  # 595959;
+    button :hover {
+    	background:  #595959;
     }
 
     #download {
-    	font - size : 3em;
-    	width : 100% ;
-    	margin - left : auto;
-    	margin - right : auto;
+    	font-size : 3em;
+    	width: 100% ;
+    	margin-left : auto;
+    	margin-right : auto;
     	height : 48px;
     	display : block;
-    	margin - top : 5px;
+    	margin-top: 5px;
         background: dimgray;
     }
 	
 	.actionButtons button{
-	display : inline - block;
+	display : inline-block;
     	margin : 3px;
 	color:dimgray;
 	background:none;
 	}
 
     ul {
-    	list - style : none;
-    	padding : 0;
-    	margin - top : 5px;
-    	margin - bottom : 5px;
-    	margin - left : 2px;
+    	list-style : none;
+    	padding: 0;
+    	margin-top : 5px;
+    	margin-bottom : 5px;
+    	margin-left : 2px;
     }
 
     ul > li {
@@ -77,11 +77,12 @@
     }
 	
     </style>
-    <script type="text/javascript" src="thirdParty/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="popup.js"></script>
   </head>
   <body>
-	<button id="download">DOWNLOAD THIS GAME</button>
+    <div>Number of words changed <span id="wordsChanged"></span></div>
+    <div>Percentage happiness increased by <span id="happinessStats"></span></div>
 	<hr>
 		<div class="actionButtons">
 			<button id="resume">START</button>
