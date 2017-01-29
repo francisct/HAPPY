@@ -28,8 +28,8 @@ $set.each(function(index){
                 wordCount: wordCount,
                 profanityCount: profanityCount
             });
-            var happyPercentage = (profanityCount * 1.0 / wordCount) * 100;
-            $('<div id="happy" style="position: fixed; border-radius:5px; background-color: rgba(0,0,0,0.5); color:white; bottom:20px; right:20px; width:200px; height:57px; padding-top: 17px; text-align:center;"> ' + happyPercentage + '% MORE HAPPY :D</div>').appendTo(document.body);
+            var happyPercentage = parseInt((profanityCount * 1.0 / wordCount) * 100);
+            $('<div id="happy" style="position: fixed; border-radius:5px; background-color: rgba(0,0,0,0.5); color:white; bottom:20px; right:20px; width:200px; height:50px; text-align:center;"> <p style="font-family: Arial; margin-top:16px;">' + happyPercentage + '% MORE HAPPY :D </p></div>').appendTo(document.body);
 
         }
     }
