@@ -11,7 +11,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     }
 });
 
-chrome.tabs.onUpdated.addListener(function (tabId, info) {
+chrome.webNavigation.onCompleted.addListener(function (tabId, info) {
 
     if (extOn) {
         makeItHappier();
@@ -24,17 +24,17 @@ function makeItHappier(){
         chrome.tabs.executeScript(null, {
             file: 'thirdParty/jquery-2.2.3.min.js'
         }, function () {
-            chrome.tabs.executeScript(null, {
-                file: 'thirdParty/semantria/SemantriaJavaScriptSDK.js'
-            }, function () {
                 chrome.tabs.executeScript(null, {
-                    file: 'profanity.js'
+                    file: 'displayPopup.js'
                 }, function () {
                     chrome.tabs.executeScript(null, {
-                        file: 'readPage.js'
+                        file: 'profanity.js'
+                    }, function(){
+                        chrome.tabs.executeScript(null, {
+                            file: 'readPage.js'
+                        })
                     })
                 })
-            })
-        })
+            });
 
 }
