@@ -19,7 +19,6 @@
     "angular-css": "^1.0.8",
     "es6-shim": "^0.35.1",
     "mousetrap": "^1.6.0",
-    "angular-fullpage.js": "git://github.com/hellsan631/angular-fullpage.js.git#df5ed68de1c8dd0c96a51b40e68801c84fee6bff",
     "fullpage.js": "^2.9.2"
   },
   "resolutions": {
