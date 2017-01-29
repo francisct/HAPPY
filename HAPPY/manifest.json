@@ -3,7 +3,7 @@
 	"description" : "Browser happy",
 	"version" : "1.0",
 	"permissions" : [
-		"webNavigation", "background", "downloads", "tabs", "storage", "<all_urls>", "activeTab", "*://*/*"
+		"webNavigation", "background", "downloads", "tabs", "storage", "<all_urls>", "activeTab"
 	],
 	"browser_action" : {
 		"default_title" : "Happy mode",

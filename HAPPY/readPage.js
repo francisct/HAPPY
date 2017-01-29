@@ -1,9 +1,7 @@
 var wordCount = 0;
 var profanityCount = 0;
 
-
-
-var $set = $('p:not(:has(*)), b:not(:has(*)), a:not(:has(*)), span:not(:has(*))');
+var $set = $('p:not(:has(*:not(br, span))), b:not(:has(*:not(br, span))), a:not(:has(*:not(br, span))), span:not(:has(*:not(br, span))), div:not(:has(*:not(br, span)))');
 var len = $set.length;
 $set.each(function(index){
     var el = $(this);
@@ -23,17 +21,9 @@ $set.each(function(index){
     });
 
     if (index == len - 1) {
+            var happyPercentage = parseInt((profanityCount * 1.0 / wordCount) * 100);
+            $('#happy p').html(happyPercentage + "% MORE HAPPY :D");
 
-        if (!$("#happy").length) {
-            chrome.runtime.sendMessage({
-                action: 'displayHappyPercentage',
-                wordCount: wordCount,
-                profanityCount: profanityCount
-            });
-            var happyPercentage = (profanityCount * 1.0 / wordCount) * 100;
-            $('<div id="happy" style="position: fixed; border-radius:5px; background-color: rgba(0,0,0,0.5); color:white; bottom:20px; right:20px; width:200px; height:57px; padding-top: 17px; text-align:center;"> ' + happyPercentage + '% MORE HAPPY :D</div>').appendTo(document.body);
-
-        }
     }
 
 });

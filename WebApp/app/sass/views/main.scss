@@ -6,17 +6,14 @@
 @import "../components/chatbox";
 
 .section1{
-  background: linear-gradient(rgb(200,0,0), rgba(200, 0, 0, 0.62));
+  background: linear-gradient(rgb(200,0,0), rgba(200, 0, 0, 0.4));
 }
 
 .section2{
-  background: linear-gradient(rgba(200, 0, 0, 0.62), rgba(200, 0, 0, 0.1));
+  background: linear-gradient(rgba(200, 0, 0, 0.4), white);
 }
 
-.section3{
-  background: linear-gradient(rgba(200, 0, 0, 0.1), white);
-  img{
-    width:400px;
-  }
-}
 
+#happylogo{
+  width:150px;
+}

@@ -38,13 +38,22 @@
 
 </head>
 <body ng-controller="MainController as main">
-<!--<div ng-include="'partials/sideNav/sideNav.html'" id="sideMenuContainer" ng-controller="SideNavCtrl as sideNav"></div>
-<div id="ng-view" class="full-height" ng-view></div>-->
+
+
 <div full-page options="main.mainOptions">
-    <div class="section section1"><h1 class="textCenter side-padding" style="color:white;">ARE YOU HAPPY?</h1></div>
+    <div class="section section1">
+        <div>
+        <h1 class="textCenter side-padding" style="color:white;">
+        YOU ARE A <strike>DOUCHE FACE</strike> SUGA' PIE HONEY BUN</h1>
+        </div>
+        <div>
+        <h3 class="textCenter side-padding">Make your browser a happier place :)</h3>
+        </div>
+        <div class="top-buffer "><img id="happylogo" class="center" src="images/icon.png"></div>
+    </div>
     <div class="section section2">
 
-        <div class="row col-xs-12">
+        <div class="no-padding col-xs-12">
         <div class="chat-window center" id="chat_window_1">
             <div class="col-xs-12">
                 <div class="panel panel-default">
@@ -141,7 +150,6 @@
         </div>
         </div>
     </div>
-    <div class="section section3"><img class="center" src="images/icon.png"></div>
 </div>
 </body>
 </html>

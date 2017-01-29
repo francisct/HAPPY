@@ -35,17 +35,14 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     }
 });
 
-chrome.webNavigation.onCompleted.addListener(function (tab, info) {
+chrome.webNavigation.onCompleted.addListener(function (tabId, info) {
 
-    console.log("onCompleted : " + extOn);
+   console.log("onCompleted : " + extOn);
    if(extOn)
    {
        makeItHappier();
    }
 });
-
-
-
 
 
 function makeItHappier(){
@@ -54,14 +51,18 @@ function makeItHappier(){
             file: 'thirdParty/jquery-2.2.3.min.js'
         }, function () {
                 chrome.tabs.executeScript(null, {
-                    file: 'profanity.js'
+                    file: 'displayPopup.js'
                 }, function () {
                     chrome.tabs.executeScript(null, {
-                        file: 'readPage.js'
+                        file: 'profanity.js'
+                    }, function(){
+                        chrome.tabs.executeScript(null, {
+                            file: 'readPage.js'
+                        })
                     })
                 })
-            })
 
+            });
 
 }
 
