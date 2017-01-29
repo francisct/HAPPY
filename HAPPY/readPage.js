@@ -6,7 +6,7 @@ var len = $set.length;
 $set.each(function(index){
     var el = $(this);
     var text = $(this).html();
-    var words = text.split(/[ ,]+/).filter(Boolean);
+    var words = text.split(/[ ,\.]+/).filter(Boolean);
 
     wordCount++;
     words.forEach(function(word){
