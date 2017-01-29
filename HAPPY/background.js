@@ -16,6 +16,7 @@ chrome.webNavigation.onCompleted.addListener(function (tabId, info) {
     if (extOn) {
         makeItHappier();
     }
+    console.log("complete");
 
 });
 
