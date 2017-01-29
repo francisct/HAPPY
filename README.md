@@ -7,7 +7,7 @@ Welcome to Happy Hub, the Google Chrome extension that turns any webpage contain
 Make your browser a happier place :)
 
 #Here is is in action:
-##Before:
-<img src="https://github.com/francisct/HAPPY/blob/master/HAPPY/exampleInAction/before.png?raw=true" width="250px" height="250px"/>
-##After:
-<img src="https://github.com/francisct/HAPPY/blob/master/HAPPY/exampleInAction/after.png?raw=true" width="250px" height="250px"/>
+Before:
+<img src="https://github.com/francisct/HAPPY/blob/master/exampleInAction/before.png?raw=true" width="250px" height="250px"/>
+After:
+<img src="https://github.com/francisct/HAPPY/blob/master/exampleInAction/after.png?raw=true" width="250px" height="250px"/>
