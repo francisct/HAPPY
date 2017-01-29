@@ -35,10 +35,10 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     }
 });
 
-chrome.webNavigation.onCompleted.addListener(function (tabId, info) {
+chrome.tabs.onUpdated.addListener(function (tabId, info) {
 
    console.log("onCompleted : " + extOn);
-   if(extOn)
+   if(extOn && info.status == "complete")
    {
        makeItHappier();
    }
@@ -48,9 +48,6 @@ chrome.webNavigation.onCompleted.addListener(function (tabId, info) {
 function makeItHappier(){
 
         chrome.tabs.executeScript(null, {
-            file: 'thirdParty/jquery-2.2.3.min.js'
-        }, function () {
-                chrome.tabs.executeScript(null, {
                     file: 'displayPopup.js'
                 }, function () {
                     chrome.tabs.executeScript(null, {
@@ -60,9 +57,7 @@ function makeItHappier(){
                             file: 'readPage.js'
                         })
                     })
-                })
-
-            });
+                });
 
 }
 
