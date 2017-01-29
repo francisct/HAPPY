@@ -1,6 +1,8 @@
 var wordCount = 0;
 var profanityCount = 0;
 
+
+
 var $set = $('p:not(:has(*)), b:not(:has(*)), a:not(:has(*)), span:not(:has(*))');
 var len = $set.length;
 $set.each(function(index){
