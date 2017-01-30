@@ -2,7 +2,7 @@
 
 <img src="https://github.com/francisct/HAPPY/blob/master/HAPPY/icon.png?raw=true" width="250px" height="250px"/>
 
-Welcome to Happy Hub, the Google Chrome extension that turns any vulgarities into something more gentle like the suga' pie honey bun you are
+Welcome to Happy Hub, the Google Chrome extension that turns any vulgarities encountered on the web into something more gentle like the suga' pie honey bun you are
 
 Make your browser a happier place :)
 
