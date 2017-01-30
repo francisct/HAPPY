@@ -1,4 +1,4 @@
-# Happy Hub
+# Happy Hub - Winner of the "No API" prize at Mchacks 2017
 
 <img src="https://github.com/francisct/HAPPY/blob/master/HAPPY/icon.png?raw=true" width="250px" height="250px"/>
 
